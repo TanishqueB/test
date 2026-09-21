@@ -36,3 +36,11 @@ def test_mask_email_basic():
     email = "priya@example.com"
     result = mask_email(email)
     assert result == "pr***@example.com"
+
+def test_normalize_phone():
+    """Test converting a dashed phone number to digits only."""
+    phone = "555-123-4567"
+
+    result = normalize_phone(phone)
+
+    assert result == "5551234567"
